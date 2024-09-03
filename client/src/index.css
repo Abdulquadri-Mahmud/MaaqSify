@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: "Ubuntu", sans-serif; */
+    /* font-weight: 300; */
+    /* font-style: normal; */
+    /* background-color: rgb(30 41 59); */
+    overflow-x: hidden;
+}
+
+/* body::-webkit-scrollbar{
+    width: 10px;
+    background-color: #fff;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius: 10px;
+} */
+.header1{
+    border-bottom: 1px solid rgb(199, 199, 199);
+}
+
+@media screen and (max-width:768px) {
+    .sidebar_cont:hover > .sidemenu{
+        width: 18rem;
+    }
+}
+
+.slick-prev, .slick-next{
+    border-radius: 30px;
+    position: absolute;
+    /* top: 17vh; */
+    width: 30px;
+    height: 30px;
+    border: none;
+    outline: none;
+    /* font-size: 20px; */
+    font-weight: 900;
+}
+.slick-prev{
+    z-index: 1;
+    left: 30px;
+}
+.slick-next{
+    z-index: 1;
+    right: 30px;
+}
+.slick-dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    width: 100%;
+}
+.slick-dots li button{
+    border: none;
+    background: rgb(221, 225, 231);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    outline: none;
+    font-size: 0;
+    color: transparent;
+    padding: 0px;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  opacity: 1;
+}
+.slick-dots li button:before {
+    content: "•";
+    width: 10px;
+    height: 10px;
+    font-size: 7px;
+    color: #021839;
+    opacity: 0.8;
+    position: absolute;
+    top: -4px;
+}
+
+.accordion input[type='checkbox']{
+    display: none;
+}
+.content::-webkit-scrollbar-thumb{
+    width: 6px;
+    background-color: #923e63;
+    border-radius: 10px;
+}
+.accordion label::after{
+    content: ' op';
+}
+.accordion input:checked ~ .content{
+    height: 300px;
+    color: #dde1e7;
+    padding: 10px;
+}
+.accordion input:checked ~ label::after{
+    content: ' cl';
+}
