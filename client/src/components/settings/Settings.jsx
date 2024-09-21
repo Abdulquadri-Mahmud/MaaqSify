@@ -13,13 +13,13 @@ export default function Settings() {
                 <RiUserSettingsLine className='text-xl'/>
             </MenuButton>
             <MenuList p={3} bg={useColorModeValue('white')}>
-                <MenuItem _hover={{bg: useColorModeValue('red.500', 'gray.800'),}} bg={useColorModeValue('black', 'gray.600')} color={'white'} rounded={5} padding={2.5} mb={3} transitionDuration={200} className='hover:-translate-y-1'>
+                <MenuItem _hover={{bgGradient:'linear(to-l, red.500, gray.800)'}} bg={useColorModeValue('gray.800', 'gray.600')} color={'white'} rounded={5} padding={2.5} mb={3} transitionDuration={200} className='hover:-translate-y-1'>
                     <Link to='/' className="">My Account</Link>
                 </MenuItem>
-                <MenuItem _hover={{bg: useColorModeValue('red.500', 'gray.800'),}} bg={useColorModeValue('black', 'gray.600')} color={'white'} rounded={5} padding={2.5} mb={3} transitionDuration={200} className='hover:-translate-y-1'>
+                <MenuItem _hover={{bgGradient:'linear(to-l, red.500, gray.800)'}} bg={useColorModeValue('gray.800', 'gray.600')} color={'white'} rounded={5} padding={2.5} mb={3} transitionDuration={200} className='hover:-translate-y-1'>
                     <Link to='/' className="">Checkout</Link>
                 </MenuItem>
-                <MenuItem _hover={{bg: useColorModeValue('red.500', 'gray.800'),}} bg={useColorModeValue('black', 'gray.600')} color={'white'} rounded={5} padding={2.5} mb={3} transitionDuration={200} className='hover:-translate-y-1'>
+                <MenuItem _hover={{bgGradient:'linear(to-l, red.500, gray.800)'}} bg={useColorModeValue('gray.800', 'gray.600')} color={'white'} rounded={5} padding={2.5} mb={3} transitionDuration={200} className='hover:-translate-y-1'>
                     <Link to='/signin' className=''>Sign In</Link> 
                 </MenuItem>
             </MenuList>

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa6";
 import { IoLogoYoutube } from 'react-icons/io5';
 import { FaCartPlus } from "react-icons/fa";
-import {Icon } from '@chakra-ui/react';
+import {Heading, Icon } from '@chakra-ui/react';
 import { IoSettingsOutline } from "react-icons/io5";
 import { MdSearch } from "react-icons/md";
 
@@ -19,12 +19,12 @@ import Settings from './settings/Settings';
 export default function Header() {
 
     return (
-      <Box bg={useColorModeValue('gray.800')} top={0} position={'sticky'} roundedBottomEnd={{md: '50px', base: '30px'}} roundedBottomStart={{md: '50px', base: '30px'}}>
+      <Box bgGradient='linear(to-l, gray.800, pink.800)' top={0} position={'sticky'} zIndex={100} roundedBottomEnd={{md: '0px', base: '0px'}} roundedBottomStart={{md: '0px', base: '0px'}}>
         <div className=''>
             <Box display={{md: 'block', base: ''}}>
-                <Box bg={useColorModeValue('white', 'gray.700')} color={'black'} className="header font-medium text-sm py-1 px-4 flex md:justify-around justify-between items-center">
+                <Box bg={useColorModeValue('', 'gray.700')} color={'white'} className="header font-medium text-sm py-1 px-4 flex md:justify-around justify-between items-center">
                     <div className="">
-                        <Link to='tel:+2347047594667' className='text-sm font-medium'>Welcome to adey-Shopify</Link>
+                        <Link to='tel:+2347047594667' className='text-sm font-medium'>Welcome to MaaqSify</Link>
                     </div>
                     <div className="">
                         <div className=" flex gap-x-2 text-red-500">
@@ -39,15 +39,15 @@ export default function Header() {
             <div className=" py-4 px-4 flex flex-wrap justify-between items-center">
                 <div className="logo">
                     <Link to={'/'}>
-                        <h1 className='md:text-4xl text-2xl font-medium text-white'>Ade<span className='text-red-500'>-Shopify</span></h1>
+                        <Heading fontWeight={600} fontSize={{md:30, base: 25}} fontFamily={'monospace'} className=' text-white uppercase'>MaaqSify</Heading>
                     </Link>
                 </div>
                 <div className="w-[30%] rounded hidden md:block">
                     <form className='w-[100%] relative'>
                         <div className="">
-                            <Input type="text" placeholder='Search For Products' bg={'white'}  color={useColorModeValue('black', 'white')} className='font-semibold rounded border-none outline-none p-2 w-[100%]'/>
-                            <Box bg={useColorModeValue('red.500', 'gray.700')} borderWidth={2} borderColor={'red.500'} className="absolute top-0 right-0 flex justify-center items-center w-[45px] h-full rounded-r-md cursor-pointer ">
-                                <Icon as={MdSearch} color={useColorModeValue('white', 'black')} fontSize={20}/>
+                            <input type="text" placeholder='Search for products'  className=' text-black font-semibold rounded-sm border-none outline-none p-2 w-[100%]'/>
+                            <Box bg={'pink.500'} className="absolute top-0 right-0 flex justify-center items-center w-[45px] h-full rounded-r-sm cursor-pointer ">
+                                <Icon as={MdSearch} color={useColorModeValue('white', 'black')} fontSize={23}/>
                             </Box>
                         </div>
                     </form>
@@ -60,7 +60,7 @@ export default function Header() {
                                 <Icon as={IoBagOutline} color={useColorModeValue('white', 'white')}/>
                             </Box>
                             <Box display={{base: 'none', md: 'block'}}>
-                                <Themes/>
+                                {/* <Themes/> */}
                             </Box>
                             <Box>
                                 <Settings/>
@@ -72,16 +72,18 @@ export default function Header() {
             </div>
             {/* <HeaderAccordion/> */}
         </div>
-        <Box display={{md: 'block', base: 'none'}} paddingBottom={3}>
-            <Flex justifyContent={'center'} alignItems={'center'} gap={4} shadow={'md'} bg={useColorModeValue('')} p={2} color={'white'}>
-                <Link to={'/'} className='text-xl'>Home</Link>
-                <Link to={'/'} className='text-xl'>About Us</Link>
-                <Link to={'/'} className='text-xl'>Shop Pages</Link>
-                <Link to={'/'} className='text-xl'>Clothing</Link>
-                <Link to={'/'} className='text-xl'>Electricity</Link>
-                <Link to={'/'} className='text-xl'>Jewellery</Link>
-                <Link to={'/'} className='text-xl'>Shoes</Link>
-                <Link to={'/'} className='text-xl'>Contact</Link>
+        <Box display={{md: 'block', base: 'none'}} width={'80%'} mx={'auto'} bg={'white'} py={1} roundedTopStart={'30px'} shadow={'sm'} roundedTopEnd={'30px'}>
+            <Flex justifyContent={'center'} alignItems={'center'} gap={5} p={2} color={'gray.900'} className='nav'>
+                {/* <Link to={'/'} className='hover:text-red-500 duration-150 font-normal'>Home</Link> */}
+                <Link to={'/'} className='hover:text-red-500 duration-150 font-normal'>Computer & Accessories</Link>
+                <Link to={'/'} className='hover:text-red-500 duration-150 font-normal'>Phone & Tablets</Link>
+                <Link to={'/'} className='hover:text-red-500 duration-150 font-normal'>Electronics</Link>
+                <Link to={'/'} className='hover:text-red-500 duration-150 font-normal'>Women's Fashion</Link>
+                <Link to={'/'} className='hover:text-red-500 duration-150 font-normal'>Men's Fashion</Link>
+                <Link to={'/'} className='hover:text-red-500 duration-150 font-normal'>Appliances</Link>
+                {/* <Link to={'/'} className='hover:text-red-500 duration-150 font-normal'>Jewellery</Link> */}
+                <Link to={'/'} className='hover:text-red-500 duration-150 font-normal'>Baby Products</Link>
+                {/* <Link to={'/'} className='hover:text-red-500 duration-150 font-normal'>Health & Beauty</Link> */}
             </Flex>
         </Box>
       </Box>

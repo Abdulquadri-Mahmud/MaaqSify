@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 
 import userAuthentication from './routes/user.routes.js';
+import listings from './routes/listing_routes.js';
 
 dotenv.config();
 
@@ -20,6 +21,7 @@ mongoose.connect(process.env.db).then(() => {
 });
 
 app.use('/api/auth', userAuthentication);
+app.use('/api/listing', listings)
 
 app.use((err, req, res, next) => {
     const statusCode = err.statusCode || 500;
@@ -31,3 +33,4 @@ app.use((err, req, res, next) => {
         message,
     });
 });
+

@@ -14,6 +14,27 @@ body{
     overflow-x: hidden;
 }
 
+.nav a{
+    position: relative;
+}
+.nav a::after{
+    content: '';
+    position: absolute;
+    bottom: -13px;
+    left: -10px;
+    overflow: hidden;
+    width: 0%;
+    height: 3px;
+    background-color: rgb(239 68 68);
+    transition: all 0.3s;
+}
+.nav a:first-child::after{
+    width: 130%;
+}
+.nav a:hover::after{
+    width: 120%;
+}
+
 /* body::-webkit-scrollbar{
     width: 10px;
     background-color: #fff;
