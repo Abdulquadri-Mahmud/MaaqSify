@@ -25,7 +25,7 @@ export default function Products() {
     <Box>
       <Flex justifyContent={{md: 'end', base: 'space-between'}}>
         <Box display={{md: 'none', base: 'block'}}>
-          <Button bgGradient='linear(to-l, gray.700, gray.800)' _hover={{bgGradient:'linear(to-r, gray.700, gray.800)'}} color={'white'} onClick={onOpen}>Open</Button>
+          <Button  bgGradient='linear(to-l, gray.800, pink.800)' _hover={{bgGradient:'linear(to-r, gray.700, gray.800)'}} color={'white'} onClick={onOpen}>Open</Button>
           <Drawer placement={placement} onClose={onClose} isOpen={isOpen}>
             <DrawerOverlay />
             <DrawerContent>

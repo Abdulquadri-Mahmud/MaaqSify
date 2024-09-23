@@ -8,12 +8,17 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 // images
-import laptop from '../assets/surface-laptop-studio.png';
-import img2 from '/samsung-phones.png';
-import img3 from '/watch.png';
-import img4 from '/t-shirt.png';
-import mobile from '/Apple-Iphone.png';
-import moyoduduza from '../assets/Print-Shirt1.png';
+// import side_banner from '/side_banner.jpg';
+import side_banner2 from '/side_banner2.png';
+import side_banner3 from '/side_banner3.jpg';
+import side_banner4 from '/side_banner4.jpg';
+import side_banner5 from '/side_banner1.jpg';
+
+import banner1 from '/body_cream.jpg';
+import banner2 from '/banner1.jpg';
+import banner3 from '/banner.jpg';
+import banner4 from '/home.jpeg';
+
 import { Link } from 'react-router-dom';
 
 function SampleNextArrow(props) {
@@ -46,60 +51,69 @@ function SamplePrevArrow(props) {
 export default function Hero() {
     const settings = {
         dots: false,
+        fade: true,
         infinite: true,
         focusOnSelect: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 2500,
+        waitForAnimate: false,
         cssEase: "linear",
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />
       };
-
       
   return (
-    <section >
-      <Flex justifyContent={'center'} alignItems={'center'} className='flex-wrap' p={{md:0, base: 0}} className='h-[60vh]'>
-        <Flex justifyContent={'center'} alignItems={'center'} width={{md: '47%', base: '100%'}} bg={{md: 'gra', base: ''}} height={{md: '300px', base:'100%'}} pb={10} pt={20}>
-          <Box>
-            <Heading color={useColorModeValue({md: 'gray.800', base: 'black'})} fontWeight={500} className='pt-3 md:text-6xl text-4xl font-semibold md:text-start text-center'><span className="md:text-7xl text-6xl">Get <span className="">Start</span></span> <br/> <span className="text-4xl">Your <span className="text-red-500">Favorite</span> Shop<span className="text-red-">ping</span></span></Heading>
-            <Text color={useColorModeValue({md: 'gray.800', base: 'black'})} fontWeight={500} fontSize={{md: '1rem', base:'16'}} className='pt-3 text-xl font-semibold md:text-start text-center'>Save more with coupons & up to 70% off!</Text>
-            <div className="flex md:justify-start justify-center mt-5">
-              <Button color={useColorModeValue('white', 'white')} bgGradient='linear(to-l, red.500, gray.800)' _hover={{bg: 'red.600'}} width={'130px'} type='button'><Link to="/">Shop Now</Link></Button>
-            </div>
-          </Box>
-        </Flex>
-        <Box width={{md: '47%', base: '100%'}} bg={{md: '', base: ''}} py={2} className='text-gray-800'>
+    <section className='pt-10 md:px-0 '>
+      <Flex justifyContent={'center'} gap={3} className='flex-wrap' p={{md:0, base: 0}} maxW={{md: '90%'}} mx={'auto'}>
+        <div className="xl:w-[60%] w-full">
           <Slider {...settings}>
-            <Flex width={'full'}>
-              <div className="h-[300px] flex justify-center items-center">
-                <img src={laptop} alt="" className='max-w-full md:max-h-[100%] max-h-[100%] '/>
+            <div className="flex justify-center items-center w-full bg-slate-300">
+              <img src={side_banner2} alt="" className='md:h-[410px] h-[200px] w-full' />
+            </div>
+            <div className=" relativeflex justify-center items-center w-full bg-slate-300">
+              <img src={side_banner4} alt="" className='md:h-[410px] h-[200px] w-full' />
+              <div className="absolute bottom-[10%] left-5 text-white font-medium">
+                <Text fontSize={25}>Smart Choices For A Smatter Home</Text>
               </div>
-            </Flex>
-            <Flex width={'full'}>
-              <div className="h-[300px] flex justify-center items-center">
-                <img src={img2} alt="" className='max-w-full md:max-h-[100%] max-h-[100%] '/>
-              </div>
-            </Flex>
-            <Flex width={'full'}>
-              <div className="h-[300px] flex justify-center items-center">
-                <img src={img3} alt="" className='max-w-full md:max-h-[100%] max-h-[100%] '/>
-              </div>
-            </Flex>
-            <Flex width={'full'}>
-              <div className=" h-[300px] flex justify-center items-center">
-                <img src={mobile} alt="" className='max-w-full md:max-h-[100%] max-h-[100%] '/>
-              </div>
-            </Flex>
-            <Flex width={'full'}>
-              <div className="h-[300px] flex justify-center items-center">
-                <img src={img4} alt="" className='max-w-full md:max-h-[100%] max-h-[100%] '/>
-              </div>
-            </Flex>
+            </div>
+            <Box bgImage={side_banner3} bgRepeat={'no-repeat'} bgSize={'cover'} bgPos={'center'} className="flex md:h-[410px] h-[200px] justify-center items-center w-full bg_img bg-slate-300">
+              <Flex justifyContent={'center'} alignItems={'center'} height={{md: '410px', base: '200px'}} className="text-white">
+                <Box textAlign={'center'}>
+                  <Heading fontWeight={500} fontSize={30} fontFamily={'cursive'}>WELCOME TO MAAQSIFY</Heading>
+                  <p className=''>We are here to save you time and money</p>
+                </Box>
+              </Flex>
+            </Box>
+            <div className="flex justify-center items-center w-full bg-slate-300">
+              <img src={side_banner5} alt="" className='md:h-[400px] h-[200px] w-full' />
+            </div>
           </Slider>
-        </Box>
+        </div>
+        <div className="xl:w-[35%] w-full flex gap-2 flex-wrap md:px-0 px-2">
+          <div className="">
+            <Link to={''}>
+              <img src={banner1} alt="" className='xl:max-w-[200px] max-w-[100px]'/>
+            </Link>
+          </div>
+          <div className="">
+            <Link to={''}>
+              <img src={banner2} alt="" className='xl:max-w-[200px] max-w-[100px]'/>
+            </Link>
+          </div>
+          <div className="">
+            <Link to={''}>
+              <img src={banner3} alt="" className='xl:max-w-[200px] max-w-[100px]'/>
+            </Link>
+          </div>
+          <div className="">
+            <Link to={''}>
+              <img src={banner4} alt="" className='xl:max-w-[200px] max-w-[100px]'/>
+            </Link>
+          </div>
+        </div>
       </Flex>
     </section>
   )

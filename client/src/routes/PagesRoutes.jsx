@@ -6,6 +6,7 @@ import Signin from '../pages/Signin';
 import Header from '../components/Header';
 import Profile from '../pages/Profile';
 import Product_Details from '../components/products_list/Product_Details';
+import Bottom_Nav from '../components/Bottom_Nav/Bottom_Nav';
 
 export default function PagesRoutes() {
   return (
@@ -18,6 +19,7 @@ export default function PagesRoutes() {
         <Route path='/profile' element={<Profile/>}/>
         <Route path='/product-details/:proID' element={<Product_Details/>}/>
       </Routes>
+      <Bottom_Nav/>
     </Router>
   )
 }

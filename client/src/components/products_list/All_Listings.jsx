@@ -38,11 +38,11 @@ export default function All_Listings() {
             <Link to={'/'}>
                 <Text fontWeight={500} fontSize={16} my={5}>Men's Fashion </Text>
             </Link>
-            <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5'>
+            <div className='grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-5'>
                 {
                     listings.map((mens) => (
                         mens.category === "men's wear" ? (
-                            <Box p={3} shadow={'md'} rounded={'md'} key={mens._id} className=''>
+                            <Box p={3} shadow={'md'} rounded={'md'} bg={'white'} key={mens._id} className=''>
                                 <Flex justifyContent={'center'} className='relative'>
                                     <Link to={`/product-details/${mens._id}`}>
                                         <img src={mens.image[0]} alt={mens.name} className='max-w-full h-[150px] object-cover object-top'/>
