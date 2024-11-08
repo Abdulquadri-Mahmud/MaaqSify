@@ -20,7 +20,7 @@ export default function Signup() {
             [e.target.id] : e.target.value
         });
     }
-    console.log(formData);
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
@@ -45,6 +45,7 @@ export default function Signup() {
             setError(error);
         }
     }
+    
     const handleLockPassword = () => {
         let getInputType = inputRef.current.type;
         let getLockPassword = lockPassword.current;
